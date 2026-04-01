@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="TaskAutomation.Application/TaskAutomation.Application.csproj" />
+  <Project Path="TaskAutomation.Contracts/TaskAutomation.Contracts.csproj" />
+  <Project Path="TaskAutomation.Domain/TaskAutomation.Domain.csproj" />
+  <Project Path="TaskAutomation.Infrastructure/TaskAutomation.Infrastructure.csproj" />
+  <Project Path="TaskAutomation.Integrations.AI/TaskAutomation.Integrations.AI.csproj" />
+  <Project Path="TaskAutomation.Integrations.AzureDevOps/TaskAutomation.Integrations.AzureDevOps.csproj" />
+  <Project Path="TaskAutomation.Integrations.RepositoryContext/TaskAutomation.Integrations.RepositoryContext.csproj" />
+  <Project Path="TaskAutomation.Persistence/TaskAutomation.Persistence.csproj" />
+  <Project Path="TaskAutomation.Worker/TaskAutomation.Worker.csproj" />
+</Solution>

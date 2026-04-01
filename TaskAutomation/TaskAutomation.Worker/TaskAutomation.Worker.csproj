@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-TaskAutomation.Worker-ed5ee372-dd21-44dd-9a85-b3df681bc0d3</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskAutomation.Application\TaskAutomation.Application.csproj" />
+    <ProjectReference Include="..\TaskAutomation.Infrastructure\TaskAutomation.Infrastructure.csproj" />
+    <ProjectReference Include="..\TaskAutomation.Integrations.AzureDevOps\TaskAutomation.Integrations.AzureDevOps.csproj" />
+    <ProjectReference Include="..\TaskAutomation.Integrations.AI\TaskAutomation.Integrations.AI.csproj" />
+    <ProjectReference Include="..\TaskAutomation.Integrations.RepositoryContext\TaskAutomation.Integrations.RepositoryContext.csproj" />
+    <ProjectReference Include="..\TaskAutomation.Persistence\TaskAutomation.Persistence.csproj" />
+  </ItemGroup>
+</Project>
