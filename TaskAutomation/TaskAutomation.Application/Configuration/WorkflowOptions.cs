@@ -25,4 +25,10 @@ public sealed class WorkflowOptions
     public int MinimumAnalysisCharacters { get; init; } = 120;
 
     public int LeaseDurationMinutes { get; init; } = 15;
+
+    public bool EnableTodoPolling { get; init; } = true;
+
+    public int TodoPollingIntervalMinutes { get; init; } = 1;
+
+    public int TodoPollingBatchSize { get; init; } = 100;
 }

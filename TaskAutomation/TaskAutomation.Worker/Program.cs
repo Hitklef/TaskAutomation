@@ -20,8 +20,8 @@ builder.Services.AddTaskAutomationPersistence(builder.Configuration);
 builder.Services.AddSingleton<IBackgroundWorkItemQueue, ChannelBackgroundWorkItemQueue>();
 builder.Services.AddHostedService<PersistenceInitializationHostedService>();
 builder.Services.AddHostedService<QueuedWorkItemBackgroundService>();
-builder.Services.AddHealthChecks()
-    .AddCheck<ProcessingStateHealthCheck>("processing-state");
+builder.Services.AddHostedService<TodoPollingBackgroundService>();
+builder.Services.AddHealthChecks().AddCheck<ProcessingStateHealthCheck>("processing-state");
 
 var app = builder.Build();
 

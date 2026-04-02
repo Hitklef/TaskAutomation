@@ -14,6 +14,7 @@ public static class ServiceCollectionExtensions
         services.AddHttpClient<AzureDevOpsApiClient>();
         services.AddScoped<IWebhookEventParser, AzureDevOpsWebhookParser>();
         services.AddScoped<IWorkItemReader, AzureDevOpsWorkItemClient>();
+        services.AddScoped<IWorkItemQueryService, AzureDevOpsWorkItemClient>();
         services.AddScoped<ICommentPublisher, AzureDevOpsCommentClient>();
         services.AddScoped<ITransitionService, AzureDevOpsTransitionService>();
         services.AddScoped<IProcessedMarkerService, AzureDevOpsProcessedMarkerService>();

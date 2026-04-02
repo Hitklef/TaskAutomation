@@ -27,6 +27,18 @@ public sealed class AzureDevOpsApiClient(HttpClient httpClient, IOptions<AzureDe
         response.EnsureSuccessStatusCode();
     }
 
+    public async Task<JsonDocument> PostJsonAsync(string relativePath, object payload, CancellationToken cancellationToken)
+    {
+        using var request = CreateRequest(HttpMethod.Post, relativePath);
+        request.Content = new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json");
+
+        using var response = await httpClient.SendAsync(request, cancellationToken);
+        response.EnsureSuccessStatusCode();
+
+        await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
+        return await JsonDocument.ParseAsync(stream, cancellationToken: cancellationToken);
+    }
+
     private HttpRequestMessage CreateRequest(HttpMethod method, string relativePath)
     {
         var settings = options.Value;
